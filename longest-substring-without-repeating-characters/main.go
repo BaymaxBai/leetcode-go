@@ -13,7 +13,7 @@ func lengthOfLongestSubstring(s string) int {
 	startPos := 0                   // 起始下标
 
 	for i, c := range s {
-		// 当字符再次出现时 触发计算子串长度 更新起始下标值(不能小于当前下标值)
+		// 当字符再次出现时 触发计算子串长度 更新起始下标值(不能小于当前起始下标值)
 		if pos, ok := posOfChar[c]; ok == true && pos >= startPos {
 			// 当前下标 - 起始下标 = 当前子串的长度
 			if i-startPos > maxLength {
